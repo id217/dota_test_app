@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h2 List of all your matches
+  each match in matches
+      form(action="/matchDetails", method='get')
+        input(type="hidden", name="match_id", value=match.match_id)
+        input(type="submit", value=match.match_id)
