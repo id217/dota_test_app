@@ -20,10 +20,10 @@ router.get('/matchDetails', function(req, res) {
 });
 
 /* POST get Match History */
-router.post('/getUserDetails', function(req, res) {
+router.post('/getMatchList', function(req, res) {
   console.log(req.body.user_key);
   //TODO set cookie value for subsequent requests
-  var reqUrl = "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?matches_requested=1&key=" + req.body.user_key
+  var reqUrl = "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=" + req.body.user_key
 
   request({ url: reqUrl, json: true}, function(error, response, body){
      if (!error && response.statusCode == 200) {

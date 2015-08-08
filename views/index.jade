@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  form(action='/getUserDetails', method='post')
+  form(action='/getMatchList', method='post')
     label(for='user_key') User Key
     input(type='text', id='user_key', name='user_key')
     input(type='submit', value='Search')
